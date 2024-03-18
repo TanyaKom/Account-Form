@@ -1,0 +1,101 @@
+<!-- #region head -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/colors.css">
+</head>
+<!-- #endregion head -->
+<body>
+    <header class="header">
+        <img src="/pictures/giraffe.png" class="giraffe__icon">
+        <h1 class="header__title">Create Account</h1>
+    </header>
+
+    <main class="main">
+        <div class="first-name">
+            <label class="data" for="first_name">First name</label>
+            <input class="input" type="text" placeholder="Enter your first name" name="first_name" required>
+        </div>
+        <div class="last-name">
+            <label class="data" for="last_name">Last name</label>
+            <input class="input" type="text" placeholder="Enter your last name" name="last_name" required>
+        </div>
+        <div class="email">
+            <label class="data" for="email">Enter email</label>
+            <input class="email-input" type="email" placeholder="Enter your email" name="email" required>
+        </div>
+        <div class="password">
+            <label class="data" for="password">Password</label>
+            <input class="input" placeholder="*************" name="password" required>
+        </div>
+        <div class="confirm-password">
+            <label class="data" for="confirm_password">Confirm Password</label>
+            <input class="input" placeholder="Enter correct your confirm password" name="confirm_password" required>
+        </div>
+        <div class="gender">
+            <p class="data">Gender:</p>
+                <label class="container">Male
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Female
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+        </div>
+        <div class="hobbies">
+            <p class="data">Hobbies</p>
+                <label class="container">Music
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Sports
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Travel
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Movies
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+        </div>
+        <div class="sourse">
+            <p class="data">Source of income</p>
+            <select class="custom-select">
+                <option value="1">Employed</option>
+                <option value="2">Unemployed</option>
+                <option value="3">Student</option>
+                <option value="4">On maternity leave</option>
+                <option value="5">Retired</option>
+            </select>
+        </div>
+        <div class="slider-container">
+            <p class="data">Income</p>
+            <input type="range" min="10000" max="100000" value="1000" class="slider" id="myRange">
+            <p>2500$<span id="income"></span></p>
+        </div>
+        <div class="profile-picture">
+            <p class="data">Upload Profile Picture</p>
+            <input type="file" accept="image/*"/>
+        </div>
+        <div class="age">
+            <p class="data">Age</p>
+            <input class="input" type="number" placeholder="Enter your age" name="age" required min="18">
+        </div>
+        <div class="bio">
+            <p class="data">Bio</p>
+            <input class="input_bio" type="text" placeholder="Tell about yourself" name="bio" required>
+        </div>
+        <button class="button">Create</button>
+    </main>
+</body>

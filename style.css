@@ -1,0 +1,222 @@
+body {
+    margin: 0%;
+    background-color: var(--background-color);
+    font-family: 'Roboto', sans-serif;
+}
+/* #region header */
+.header {
+    background-image: url(pictures/giraffe-bckg.jpeg);
+    height: 15vh;
+    width: 100%;
+    background-position: center;
+    background-size:cover;
+    margin: 0%;
+}
+
+.giraffe__icon {
+    position: absolute;
+    right: 15%;
+    height: 15vh;
+}
+
+.header__title {
+    color: var(--header-title-text);
+    margin: 0%;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 180%;
+    line-height: 15vh;
+}
+/* #endregion header */
+/* #region main */
+.main {
+    padding: 35px;
+    display: grid;
+    grid-template-areas:
+    "first-name last-name"
+    "email email"
+    "password confirm-password"
+    "gender hobbies"
+    "sourse slider-container"
+    "profile-picture age"
+    "bio bio"; 
+}
+
+.first-name {
+    grid-area: first-name;
+}
+
+.last-name {
+    grid-area: last-name;
+}
+
+.email {
+    grid-area: email;
+}
+
+.password {
+    grid-area: password;
+}
+
+.confirm-password {
+    grid-area: confirm-password;
+}
+
+.gender {
+    grid-area: gender;
+}
+
+.hobbies {
+    grid-area: hobbies;
+}
+
+.sourse {
+    grid-area: sourse;
+}
+
+.profile-picture {
+    grid-area: profile-picture;
+}
+
+.age {
+    grid-area: age;
+}
+
+.bio {
+    grid-area: bio;
+}
+/* #endregion main */
+/* #region input_settings */
+input::placeholder {
+    color: var(--placeholder-text-color);
+    width: auto;
+    display: flex;
+    width: 515px;
+    height: 44px;
+    flex-direction: column;
+    justify-content: center;
+    text-indent: 15px;
+}
+
+.input, .email-input {
+    width: 645px;
+    height: 35px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid var(--input--border-color);
+    text-indent: 15px;
+}
+
+.data {
+    color: var(--header-title-text);
+    display: flex;
+    height: 14px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 35px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.custom-select {
+    width: 645px;
+    height: 35px;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+
+.container {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+  
+.container input {
+    position: absolute;
+    opacity: 0;
+}
+/* #endregion input_settings */
+/* #region checkmark_settings */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: var(--checkmark-color);
+    border-radius: 50%;
+}
+  
+.container:hover input ~ .checkmark {
+    color: var(--checkmark-color);
+}
+  
+.container input:checked ~ .checkmark {
+    color: var(--checkmark-color);
+}
+  
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+.container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+/* #endregion checkmark_settings */
+/* #region income */
+.slider {
+    -webkit-appearance: none;
+    width: 645px;
+    height: 10px;
+    border-color: var(--checkmark-color);
+    border-radius: 5px;  
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: var(--checkmark-color);
+    cursor: pointer;
+}
+/* #endregion income */
+.input_bio {
+    display: flex;
+    width: 645px;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.button {
+    display: flex;
+    width: 250px;
+    height: 50px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 35px;
+    border-radius: 10px;
+    background-color: var(--checkmark-color);
+}
